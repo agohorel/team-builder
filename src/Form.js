@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 export const Form = ({
@@ -8,6 +8,15 @@ export const Form = ({
   setTeam,
   memberToEdit
 }) => {
+  useEffect(() => {
+    setFormData({
+      name: memberToEdit.name,
+      role: memberToEdit.role,
+      location: memberToEdit.location,
+      github_handle: memberToEdit.github_handle
+    });
+  }, [memberToEdit, setFormData]);
+
   const handleFormUpdate = e => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };

@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Card = ({
-  data: { name, role, location, github_handle },
-  setMemberToEdit
-}) => {
+export const Card = ({ data, setMemberToEdit }) => {
   return (
     <CardContainer>
-      <h1>{name}</h1>
-      <h3>{role}</h3>
-      <p>{location}</p>
-      <p>{github_handle}</p>
-      <button onClick={() => setMemberToEdit(name)}>edit</button>
+      <h1>{data.name}</h1>
+      <h3>{data.role}</h3>
+      <p>{data.location}</p>
+      <p>{data.github_handle}</p>
+      <button onClick={() => setMemberToEdit(data)}>edit</button>
     </CardContainer>
   );
 };

@@ -3,12 +3,16 @@ import styled from "styled-components";
 
 import { Card } from "./Card";
 
-export const CardsList = ({ team }) => {
+export const CardsList = ({ team, setMemberToEdit }) => {
   return (
     <Container>
       <Cards>
         {team.map(member => (
-          <Card key={member.name} data={member}></Card>
+          <Card
+            key={member.name}
+            data={member}
+            setMemberToEdit={setMemberToEdit}
+          ></Card>
         ))}
       </Cards>
     </Container>

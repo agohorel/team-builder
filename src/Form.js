@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Form = ({ formData, setFormData, team, setTeam }) => {
+export const Form = ({
+  formData,
+  setFormData,
+  team,
+  setTeam,
+  memberToEdit
+}) => {
   const handleFormUpdate = e => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };

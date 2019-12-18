@@ -14,6 +14,7 @@ function App() {
     location: "",
     github_handle: ""
   });
+  const [memberToEdit, setMemberToEdit] = useState("");
 
   return (
     <div className="App">
@@ -22,8 +23,9 @@ function App() {
         setFormData={setFormData}
         team={team}
         setTeam={setTeam}
+        memberToEdit={memberToEdit}
       ></Form>
-      <CardsList team={team}></CardsList>
+      <CardsList team={team} setMemberToEdit={setMemberToEdit}></CardsList>
     </div>
   );
 }

@@ -13,9 +13,9 @@ export const Card = ({ data: { name, role, location, github_handle } }) => {
 };
 
 const CardContainer = styled.div`
-  background-color: black;
+  background-color: #0a0a0a;
   border-radius: 3px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   color: white;
   display: inline-block;
   padding: 2rem;

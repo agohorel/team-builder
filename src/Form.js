@@ -6,10 +6,13 @@ export const Form = ({
   setFormData,
   team,
   setTeam,
-  memberToEdit
+  memberToEdit,
+  editMember
 }) => {
   useEffect(() => {
-    setFormData(memberToEdit);
+    if (memberToEdit) {
+      setFormData(memberToEdit);
+    }
   }, [memberToEdit, setFormData]);
 
   const handleFormUpdate = e => {
@@ -24,7 +27,11 @@ export const Form = ({
 
   return (
     <>
-      <StyledForm onSubmit={handleFormSubmit}>
+      <StyledForm
+        onSubmit={e =>
+          memberToEdit ? editMember(e, team, memberToEdit) : handleFormSubmit(e)
+        }
+      >
         <FormGroup>
           <label htmlFor="name">Name</label>
           <input

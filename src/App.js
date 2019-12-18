@@ -16,7 +16,19 @@ const defaultMemberData = {
 function App() {
   const [team, setTeam] = useState(data);
   const [formData, setFormData] = useState(defaultMemberData);
-  const [memberToEdit, setMemberToEdit] = useState(defaultMemberData);
+  const [memberToEdit, setMemberToEdit] = useState();
+
+  const editMember = (event, team, memberToEdit) => {
+    event.preventDefault();
+
+    team.map(member => {
+      if (member.name === memberToEdit.name) {
+        let updatedTeam = [...team];
+        updatedTeam[updatedTeam.indexOf(memberToEdit)] = formData;
+        setTeam(updatedTeam);
+      }
+    });
+  };
 
   return (
     <div className="App">
@@ -26,6 +38,7 @@ function App() {
         team={team}
         setTeam={setTeam}
         memberToEdit={memberToEdit}
+        editMember={editMember}
       ></Form>
       <CardsList team={team} setMemberToEdit={setMemberToEdit}></CardsList>
     </div>

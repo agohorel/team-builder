@@ -90,8 +90,9 @@ const StyledForm = styled.form`
 
   input {
     border: none;
-    background: #ccc;
+    background: #aaa;
     padding: 0.25rem;
+    border-radius: 3px;
   }
 
   label {

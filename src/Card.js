@@ -19,4 +19,6 @@ const CardContainer = styled.div`
   color: white;
   display: inline-block;
   padding: 2rem;
+  margin: 1rem;
+  width: calc(50% - 2rem);
 `;

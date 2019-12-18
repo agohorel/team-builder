@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+
+import "./App.css";
 import data from "./team";
 
 import { Form } from "./Form";
-import { Card } from "./Card";
+import { CardsList } from "./CardsList";
 
 function App() {
   const [team, setTeam] = useState(data);
@@ -21,9 +23,7 @@ function App() {
         team={team}
         setTeam={setTeam}
       ></Form>
-      {team.map(member => (
-        <Card key={member.name} data={member}></Card>
-      ))}
+      <CardsList team={team}></CardsList>
     </div>
   );
 }

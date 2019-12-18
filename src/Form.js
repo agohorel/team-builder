@@ -9,12 +9,7 @@ export const Form = ({
   memberToEdit
 }) => {
   useEffect(() => {
-    setFormData({
-      name: memberToEdit.name,
-      role: memberToEdit.role,
-      location: memberToEdit.location,
-      github_handle: memberToEdit.github_handle
-    });
+    setFormData(memberToEdit);
   }, [memberToEdit, setFormData]);
 
   const handleFormUpdate = e => {

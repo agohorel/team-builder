@@ -54,7 +54,6 @@ export const Form = ({
 
         <FormGroup>
           <label htmlFor="location">Location</label>
-
           <input
             id="location"
             type="text"
@@ -65,7 +64,6 @@ export const Form = ({
 
         <FormGroup>
           <label htmlFor="github_handle">Github Handle</label>
-
           <input
             id="github_handle"
             type="text"
@@ -84,9 +82,10 @@ const StyledForm = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #313136;
+  background: #25252c;
   padding: 1rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
 
   input {
     border: none;
@@ -105,6 +104,22 @@ const StyledForm = styled.form`
     color: #ccc;
     padding: 10px 12px;
     border-radius: 3px;
+
+    &:hover {
+      color: white;
+      background-color: #373745;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    input {
+      width: 50%;
+    }
   }
 `;
 
@@ -113,4 +128,9 @@ const FormGroup = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 1rem 20px 0;
+
+  @media (max-width: 770px) {
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
 `;

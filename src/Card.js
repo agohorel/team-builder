@@ -30,7 +30,15 @@ const CardContainer = styled.div`
   display: inline-block;
   padding: 2rem;
   margin: 1rem;
-  width: calc(50% - 2rem);
+  width: calc(33% - 2rem);
+
+  @media (max-width: 1200px) {
+    width: calc(50% - 2rem);
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -43,7 +51,7 @@ const Button = styled.button`
 
   &:hover {
     background-color: #999;
-    color: white;
+    color: black;
     cursor: pointer;
   }
 `;

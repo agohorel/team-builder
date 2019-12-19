@@ -28,4 +28,13 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 80%;
+  transition: .2s ease-out width;
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+  
+  @media (max-width: 500px) {
+    width: 95%;
+  }
 `;

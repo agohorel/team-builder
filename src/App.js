@@ -28,6 +28,9 @@ function App() {
         setTeam(updatedTeam);
       }
     });
+
+    setMemberToEdit();
+    setFormData(defaultMemberData);
   };
 
   return (
